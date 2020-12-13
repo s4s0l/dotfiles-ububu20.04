@@ -1,0 +1,17 @@
+profiles:
+  sasol-laptop:
+    dotfiles:
+      - inst_init_sh
+      - inst_packages1_sh      
+      - inst_packages2_sh          
+variables:
+  base_user: sasol
+  version_vagrant: 2.2.5
+config:
+  dotpath: dotfiles-global
+  backup: true
+  create: true
+  import_configs:
+  - tmp/global-install.yaml  
+dotfiles:
+      
