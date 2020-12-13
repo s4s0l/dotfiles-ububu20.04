@@ -5,6 +5,45 @@
 https://www.medo64.com/2020/05/installing-encrypted-uefi-zfs-root-on-ubuntu-20-04/
 ```
 
+## Generyczne problemy
+
+```
+sudo add-apt-repository universe
+sudo apt install git
+
+```
+Odpowiednio skonfigurować sobie git'a, podegrać jakieś kluczyki itp
+
+```
+sklonować to repo:
+git submodule init
+git submodule update
+sudo apt install python3-pip
+sudo pip3 install -r dotdrop/requirements.txt --user
+pip3 install -r dotdrop/requirements.txt --user
+```
+
+
+```
+docker 
+opera
+spotify
+exa
+fd
+ripgrep-bash-completion
+fzf bash completion
+terraform
+aws-cli
+
+
+```
+
+
+
+
+
+# Other stuff
+
 ## karta sd
 ```
 nie działa mi sd
@@ -39,20 +78,4 @@ ssh-add -l
 ```
 
 
-## Generyczne problemy
 
-```
-sudo apt install git
-sudo add-apt-repository universe
-sudo apt install git
-sudo apt purge snapd
-rm -rf ~/snap
-sudo rm -rf /snap
-sudo rm -rf /var/snap
-sudo rm -rf /var/lib/snapd
-
-```
-
-```
-
-```
