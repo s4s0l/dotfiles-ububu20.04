@@ -17,6 +17,24 @@ z modemem to za chuja nie wiem jak to ma działa ogólnie mmcli coś robi z dotf
 ## smart card
 
 ```
+gpg --card-status
+gpgconf --kill gpg-agent
+gpg --import stubs.asc	
+gpgconf --kill gpg-agent
+gpg --card-status
+
+ensure enable-ssh-support is present in ~/.gnupg/gpg-agent.conf. 
+gpg --with-keygrip -K kopiujemy keygrip ten który ma [A] i dodajemy do ~/.gnupg/sshcontrol
+
+sasol@localhost:~/Projects> cat ~/.gnupg/gpg-agent.conf 
+enable-ssh-support
+sasol@localhost:~/Projects> cat ~/.gnupg/sshcontrol 
+D9BD0CA4FEDD94DB329988641B9BE4D09DDF2250
+
+gpgconf --kill gpg-agent
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+ssh-add -l
+
 
 ```
 
@@ -24,6 +42,7 @@ z modemem to za chuja nie wiem jak to ma działa ogólnie mmcli coś robi z dotf
 ## Generyczne problemy
 
 ```
+sudo apt install git
 sudo add-apt-repository universe
 sudo apt install git
 sudo apt purge snapd
