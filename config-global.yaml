@@ -4,6 +4,14 @@ profiles:
       - inst_init_sh
       - inst_packages1_sh      
       - inst_packages2_sh          
+      - inst_packages3_sh          
+      - inst_opera_sh
+      - inst_spotify_sh
+      - inst_docker_sh
+      - inst_vscode_sh
+      - inst_teams_sh
+      - inst_chrome_sh
+      - inst_packages4_sh
 variables:
   base_user: sasol
   version_vagrant: 2.2.5

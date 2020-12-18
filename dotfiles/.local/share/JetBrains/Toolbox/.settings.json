@@ -1,0 +1,32 @@
+{
+    "channel_rollback_max_history" : 1,
+    "install_location" : "/home/sasol/.opt/JetBrainsToolbox",
+    "jetbrains_account" : {
+      "active" : "bloodred@poczta.onet.pl"
+    },
+    "privacy_policy" : {
+      "eua_accepted_version" : "1.2"
+    },
+    "proxy" : {
+      "enabled" : false
+    },
+    "shell_scripts" : {
+      "enabled" : true
+    },
+    "signal" : "settingsChanged",
+    "statistics" : {
+      "allow" : false
+    },
+    "tools" : {
+      "update_all_automatically" : false
+    },
+    "update" : {
+      "filter" : {
+        "quality_filter" : {
+          "order_value" : 10000
+        }
+      }
+    },
+    "projects" : { },
+    "ordering" : { }
+  }

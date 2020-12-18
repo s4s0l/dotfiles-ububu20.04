@@ -1,11 +1,9 @@
 profiles:
   sasol-laptop:
     dotfiles:
-    - inst_spotify_sh
     - inst_git_sh
     - inst_vscode_sh
     - f_vscode_settings
-    - inst_tldr_sh
     - inst_fzf_sh
     - inst_diff_so_fancy_sh
     - inst_bashit_sh
@@ -14,9 +12,6 @@ profiles:
     - d_resources
     - f_bashrc
     - f_profile
-    - f_xsessionrc
-    - f_initrc__
-    - f_initrc
     - f_zshrc
     - d_bashdrop
     - d_bin
@@ -25,6 +20,7 @@ profiles:
     - inst_sdkman_sh
     - d_sdkman
     - inst_sdkman_tools_sh
+    - inst_speedread_sh
 
 variables:
   base_user: sasol
@@ -51,15 +47,6 @@ dotfiles:
   f_profile:
     dst: ~/.profile
     src: .profile
-  f_xsessionrc:
-    dst: ~/.xsessionrc
-    src: .xsessionrc
-  f_initrc:
-    dst: ~/.xinitrc
-    src: .xinitrc 
-  f_initrc__:
-    dst: ~/.xinitrc__
-    src: .xinitrc__   
   f_zshrc:
     dst: ~/.zshrc
     src: .zshrc

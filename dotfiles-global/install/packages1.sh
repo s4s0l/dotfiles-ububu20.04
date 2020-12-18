@@ -14,14 +14,18 @@ sudo apt install \
 	atop \
 	bat \
 	fasd \
-	kgpg \
 	ripgrep \
 	fzf \
+	fd-find \
 	yakuake \
 	remmina \
 	zip \
 	shellcheck \
 	sox \
 	libncurses5 \
-	telnet
+	telnet \
+	curl \
+	apt-transport-https \
+	ca-certificates \
+	software-properties-common
 

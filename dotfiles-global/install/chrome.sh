@@ -1,5 +1,7 @@
 #!/bin/bash
-sudo zypper ar http://dl.google.com/linux/chrome/rpm/stable/x86_64 Google-Chrome
-sudo rpm --import https://dl.google.com/linux/linux_signing_key.pub
-sudo zypper refresh -f
-sudo zypper in  google-chrome-stable
+set -e
+
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google.list
+apt update
+apt install google-chrome-stable

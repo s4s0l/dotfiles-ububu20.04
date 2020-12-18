@@ -1,9 +1,8 @@
 #!/bin/bash
-sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+set -e
 
-sudo zypper ar https://packages.microsoft.com/yumrepos/vscode vscode
-
-sudo zypper refresh
-
-sudo zypper install code
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" | sudo tee /etc/apt/sources.list.d/vscode.list
+apt update
+apt install code
 

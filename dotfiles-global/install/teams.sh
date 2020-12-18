@@ -1,4 +1,9 @@
 #!/bin/bash
 set -e
-wget https://packages.microsoft.com/yumrepos/ms-teams/teams-1.3.00.5153-1.x86_64.rpm -O /tmp/teams.rpm
-zypper in /tmp/teams.rpm
+
+
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main" > /etc/apt/sources.list.d/teams.list
+apt update
+apt install teams
+
