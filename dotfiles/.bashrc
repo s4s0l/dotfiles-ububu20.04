@@ -30,5 +30,7 @@ source ~/.bashdrop/.bash_path.sh
 
 source ~/.bashdrop/.bash_after.sh
 
+source ~/.bashdrop/.bash_ububu.sh
+
 #[[ -s "~/.perl5/etc/bashrc" ]] && source ~/.perl5//etc/bashrc
 
