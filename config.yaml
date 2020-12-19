@@ -21,6 +21,7 @@ profiles:
     - d_sdkman
     - inst_sdkman_tools_sh
     - inst_speedread_sh
+    - inst_thunderbird_sh
 
 variables:
   base_user: sasol

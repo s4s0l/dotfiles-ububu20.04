@@ -12,6 +12,8 @@ profiles:
       - inst_teams_sh
       - inst_chrome_sh
       - inst_packages4_sh
+      - inst_dropbox_sh
+
 variables:
   base_user: sasol
   version_vagrant: 2.2.5

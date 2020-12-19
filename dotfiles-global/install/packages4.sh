@@ -8,5 +8,7 @@ sudo apt install tldr \
                 iotop \
                 hollywood \
                 cmatrix \
-                thunderbird
+                gnome-tweaks \
+                dconf-editor \
+                guake
 

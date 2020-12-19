@@ -5,54 +5,74 @@
 https://www.medo64.com/2020/05/installing-encrypted-uefi-zfs-root-on-ubuntu-20-04/
 ```
 
-## Generyczne problemy
+## Generyczna instrukcja 
+
+
+### Inicjacja dotdropa
 
 ```
 sudo add-apt-repository universe
 sudo apt install git
-
 ```
+
 Odpowiednio skonfigurować sobie git'a, podegrać jakieś kluczyki itp
 
 ```
-sklonować to repo:
+sklonować to repo i w katalogu gdzie trafiło to repo robimy:
 git submodule init
 git submodule update
 sudo apt install python3-pip
-sudo pip3 install -r dotdrop/requirements.txt --user
 pip3 install -r dotdrop/requirements.txt --user
+sudo pip3 install -r dotdrop/requirements.txt --user
 ```
 
+### jak to uruchamiać
 
 ```
-docker 
-opera
-spotify
-exa
-fd
-ripgrep-bash-completion
-fzf bash completion
-terraform
-aws-cli
-
-
+./install-global.sh #to zainstaluje rzeczy z roota, patrz dotfiles-global i config-global.yml
 ```
 
+```
+./install.sh # to instaluje rzeczy dla usera
+```
+### co gdzie się znajdzie
+
+* `~/.bin` w tym katalogu mogą być tylko uruchamialne rzeczy pochodzące z dotdropa
+* `~/.bin-opt` tu można se dorzucać swoje rzeczy które się mają znaleźć na PATH, tam też 
+   sam dotdrop może dokopiowywać jakieś rzeczy. Rozdzielone względem `~/.bin`, aby dało się synchronizować `~/.bin` do i z dotdropa w całości. 
+* `~/.opt` tu instalowane są aplikacje różne różniaste   
+
+
+### migracja thunderbirda
+
+Po zainstalowaniu nowy thunderbird (ze wsparciem dla pgp 78 cośtam) wyląduje w ~/.opt i będzie podlinkowany do ~/.bin-opt więc thunderbird uruchomi nowego ale linki z gnoma będą wskazywać na starego. 
+
+Po skopiowaniu ~/.thunderbird uruchomić:
+
+```
+~/.opt/thunderbird/thunderbird -profilemanager
+```
+I wybrać co tam trzeba
+
+# TODO:
+
+* aws-cli
+* 
 
 
 
-
-# Other stuff
+# Other notes for sasol only
 
 ## karta sd
 ```
-nie działa mi sd
+nie działa mi sd :/ 
 ```
 
 ##  Modem 
 ```
 z modemem to za chuja nie wiem jak to ma działa ogólnie mmcli coś robi z dotfiles-mx ale network manager tego w ubuntu nie ogarnia ale po paru włączeniach i wyłączeniach i wyłączeniu i wyłączeniu interfejsu sieciowego wwan0 pommogło jakby
 ```
+
 ## smart card
 
 ```
