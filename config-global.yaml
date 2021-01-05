@@ -5,7 +5,7 @@ profiles:
       - inst_packages1_sh      
       - inst_packages2_sh          
       - inst_packages3_sh          
-      - inst_opera_sh
+      #- inst_opera_sh
       - inst_spotify_sh
       - inst_docker_sh
       - inst_vscode_sh

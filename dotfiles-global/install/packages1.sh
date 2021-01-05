@@ -29,3 +29,4 @@ sudo apt install \
 	ca-certificates \
 	software-properties-common
 
+ln -s /usr/bin/batcat /usr/bin/bat
